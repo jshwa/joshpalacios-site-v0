@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styles from '../css/layout.module.css'
 
 import Nav from '../components/Header/Nav'
 
 const TemplateWrapper = props => (
-  <div>
+  <div className={styles.container} >
     <Helmet
       title="Josh Palacios"
       meta={[
@@ -13,7 +14,7 @@ const TemplateWrapper = props => (
       ]}
     />
     { props.location.pathname === '/' ? '' : <Nav />}
-    <div>
+    <div className={styles.container}>
       {props.children()}
     </div>
   </div>
