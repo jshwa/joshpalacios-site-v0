@@ -8,9 +8,18 @@ const DebatePage = ({ data }) => (
    <div className={styles.container} >
       <div className={styles.left_panel} >
          <DebateNav />
+         <div className={styles.fname} >
+            Joshua
+         </div>
+         <div className={styles.lname}>
+            Palacios
+         </div>
+         <div className={styles.title}>
+            ACADEMIC DEBATE COACH
+         </div>
       </div>
       <div className={styles.image_div} >
-         <Img sizes={data.logo.sizes} className={styles.image} imgStyle={{"object-position": "right center"}}/>
+         <Img sizes={data.hero.sizes} className={styles.image} imgStyle={{"object-position": "right center"}}/>
       </div>
    </div>
 )
@@ -18,8 +27,8 @@ const DebatePage = ({ data }) => (
 export default DebatePage
 
 export const query = graphql`
-  query LogoImageQuery {
-    logo: imageSharp(id: { regex: "/JoshLogoPartial.png/"}) {
+  query heroImageQuery {
+    hero: imageSharp(id: { regex: "/JoshLogoPartial.png/"}) {
       sizes(maxWidth: 1080) {
        ...GatsbyImageSharpSizes
       }
