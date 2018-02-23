@@ -30,7 +30,7 @@ export const query = graphql`
   query heroImageQuery {
     hero: imageSharp(id: { regex: "/JoshLogoPartial.png/"}) {
       sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes
+       ...GatsbyImageSharpSizes_noBase64
       }
     }
    }

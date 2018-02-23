@@ -24,7 +24,7 @@ export const query = graphql`
   query GatsbyImageQuery {
     logo: imageSharp(id: { regex: "/JoshLogoCircle.png/"}) {
       sizes(maxWidth: 1080) {
-       ...GatsbyImageSharpSizes
+       ...GatsbyImageSharpSizes_noBase64
       }
     }
    }
