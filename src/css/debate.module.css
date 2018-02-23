@@ -1,0 +1,16 @@
+.container {
+   height: 100%;
+   display: grid;
+   grid-template-columns: 5fr 4fr;
+}
+
+.left_panel {
+   height: 100%;
+   display: grid;
+   grid-template-rows: .5fr 3fr 1fr 1fr .5fr
+}
+
+.image {
+   height: 100vh;
+   max-height: 830px;
+}

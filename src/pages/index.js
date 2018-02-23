@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import '../css/index.css';
-import styles from '../css/home.module.css';
+import styles from '../css/home.module.css'
 
 const IndexPage = ({ data }) => (
    <div className={styles.container} >
