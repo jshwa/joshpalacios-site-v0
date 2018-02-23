@@ -19,7 +19,7 @@ const DebatePage = ({ data }) => (
          </div>
       </div>
       <div className={styles.image_div} >
-         <Img sizes={data.hero.sizes} className={styles.image} imgStyle={{"object-position": "right center"}}/>
+         <Link to="/"><Img sizes={data.hero.sizes} className={styles.image} imgStyle={{"object-position": "right center"}}/></Link>
       </div>
    </div>
 )
