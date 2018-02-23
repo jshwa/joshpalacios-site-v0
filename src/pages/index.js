@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => (
          <Img sizes={data.logo.sizes} />
       </div>
       <div className={styles.link}>
-         <Link to="/web/">FULL STACK WEB DEVELOPER</Link>
+         <Link to="/dev/">FULL STACK WEB DEVELOPER</Link>
       </div>
    </div>
 )

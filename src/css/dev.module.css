@@ -1,14 +1,15 @@
 .container {
    height: 100%;
    display: grid;
-   grid-template-columns: 5fr 4fr;
+   grid-template-columns: 4fr 5fr;
    align-items: center;
 }
 
-.left_panel {
+.right_panel {
    height: 100%;
    display: grid;
-   grid-template-rows: .5fr 2fr auto auto auto .25fr
+   grid-template-rows: .5fr 2fr auto auto auto .25fr;
+   text-align: right;
 }
 
 .image {
@@ -30,7 +31,7 @@
 
 .lname {
    padding: 0;
-   margin: -10px 28px;
+   margin: -10px 40px;
    color: white;
    grid-row-start: 4;
     /* autoprefixer: off */
@@ -40,7 +41,7 @@
 }
 
 .title {
-   margin-left: 40px;
+   margin-right: 45px;
    color: white;
    grid-row-start: 5;
     /* autoprefixer: off */
