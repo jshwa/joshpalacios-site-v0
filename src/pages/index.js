@@ -1,22 +1,36 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import Img from 'gatsby-image';
+import Link, { navigateTo } from 'gatsby-link';
 import '../css/index.css';
-import styles from '../css/home.module.css'
+import styles from '../css/home.module.css';
+import HeroImg from '../components/HeroImage';
+import Img from 'gatsby-image';
 
-const IndexPage = ({ data }) => (
-   <div className={styles.container} >
-      <div className={styles.link}>
-         <Link to="/debate/">ACADEMIC DEBATE COACH</Link>
-      </div>
-      <div className={styles.image} >
-         <Img sizes={data.logo.sizes} />
-      </div>
-      <div className={styles.link}>
-         <Link to="/dev/">FULL STACK WEB DEVELOPER</Link>
-      </div>
-   </div>
-)
+class IndexPage extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state = {in: true}
+   }
+
+   exit = () => {
+      this.setState({in:false})
+      setTimeout(() => {navigateTo('/debate/')}, 2000)
+      
+   }
+
+   render() {
+      return (
+         <div className={styles.container} >
+            <div className={styles.link} onClick={this.exit}>
+              ACADEMIC DEBATE COACH
+            </div>
+            <HeroImg in={this.state.in} image={this.props.data.logo.sizes} />
+            <div className={styles.link}>
+               <Link to="/dev/">FULL STACK WEB DEVELOPER</Link>
+            </div>
+         </div>
+      )
+   }
+}
 
 export default IndexPage
 
