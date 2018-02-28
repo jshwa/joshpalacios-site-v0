@@ -1,9 +1,10 @@
 import React from 'react';
 import Link, { navigateTo } from 'gatsby-link';
+import Img from 'gatsby-image';
 import '../css/index.css';
 import styles from '../css/home.module.css';
 import HeroImg from '../components/HeroImage';
-import Img from 'gatsby-image';
+import Fade from '../components/Fade';
 
 class IndexPage extends React.Component {
    constructor(props) {
@@ -11,21 +12,26 @@ class IndexPage extends React.Component {
       this.state = {in: true}
    }
 
-   exit = () => {
+   goToDebate = () => {
       this.setState({in:false})
-      setTimeout(() => {navigateTo('/debate/')}, 2000)
+      setTimeout(() => {navigateTo('/debate/')}, 1500)
       
+   }
+
+   goToDev = () => {
+      this.setState({in:false})
+      setTimeout(() => {navigateTo('/dev/')}, 1500)
    }
 
    render() {
       return (
          <div className={styles.container} >
-            <div className={styles.link} onClick={this.exit}>
-              ACADEMIC DEBATE COACH
+            <div className={styles.link} onClick={this.goToDebate}>
+              <Fade in={this.state.in}> ACADEMIC DEBATE COACH </Fade>
             </div>
             <HeroImg in={this.state.in} image={this.props.data.logo.sizes} />
-            <div className={styles.link}>
-               <Link to="/dev/">FULL STACK WEB DEVELOPER</Link>
+            <div className={styles.link} onClick={this.goToDev}>
+               <Fade in={this.state.in}> FULL STACK WEB DEVELOPER </Fade>
             </div>
          </div>
       )

@@ -48,4 +48,3 @@ class HeroImg extends Component {
 }
 
 export default HeroImg
-;
