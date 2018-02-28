@@ -3,19 +3,20 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import DebateNav from '../components/Header/DebateNav';
 import styles from '../css/debate.module.css';
+import SlideInFromLeft from '../components/animations/SlideInFromLeft';
 
 const DebatePage = ({ data }) => (
    <div className={styles.container} >
       <div className={styles.left_panel} >
-         <DebateNav />
+         <SlideInFromLeft> <DebateNav /> </SlideInFromLeft>
          <div className={styles.fname} >
-            Joshua
+            <SlideInFromLeft> Joshua </SlideInFromLeft>
          </div>
          <div className={styles.lname}>
-            Palacios
+            <SlideInFromLeft> Palacios </SlideInFromLeft>
          </div>
          <div className={styles.title}>
-            ACADEMIC DEBATE COACH
+            <SlideInFromLeft> ACADEMIC DEBATE COACH </SlideInFromLeft>
          </div>
       </div>
       <div className={styles.image_div} >

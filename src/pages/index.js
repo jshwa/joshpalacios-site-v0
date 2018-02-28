@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import '../css/index.css';
 import styles from '../css/home.module.css';
 import HeroImg from '../components/HeroImage';
-import Fade from '../components/Fade';
+import Fade from '../components/animations/Fade';
 
 class IndexPage extends React.Component {
    constructor(props) {
