@@ -3,14 +3,17 @@
    display: grid;
    grid-template-columns: 1fr 2.5fr 1fr;
    align-items: center;
+   overflow: hidden;
 }
 
 .link { 
    text-align: center;
    font-weight: 100;
    font-size: 18px;
+   color: white;
    transition-property: font-size;
    transition-duration: 1s;
+   cursor: pointer;
 }
 
 .link a {

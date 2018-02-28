@@ -11,10 +11,15 @@
    grid-template-rows: .5fr 2fr auto auto auto .25fr
 }
 
+.image_div {
+   overflow: hidden;
+}
+
 .image {
    height: 100vh;
    max-height: 830px;
    align-self: center;
+   animation: slideLeft 1s ease-out;
 }
 
 .fname {
