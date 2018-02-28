@@ -12,7 +12,8 @@
     "gatsby-plugin-sharp": "^1.6.32",
     "gatsby-source-filesystem": "^1.5.21",
     "gatsby-transformer-sharp": "^1.6.20",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-transition-group": "^2.2.1"
   },
   "keywords": [
     "gatsby"
