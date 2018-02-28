@@ -5,19 +5,20 @@ const duration = 2000;
 
 const defaultStyle = {
    transition: `transform ${duration}ms ease-in-out`,
-   transform: 'translateX(-900px)'
+   transform: 'translateX(0px)'
 };
 
 const transitionStyles = {
-   entering: { transform: 'translateX(-1000px)' },
-   entered: { transform: 'translateX(0px)' },
+   entering: { transform: 'translateX(0px)'},
+   entered: { transform: 'translateX(0px)'},
+   exiting: { transform: 'translateX(0px)' },
+   exited: { transform: 'translateX(0px)' },
 }
 
-const SlideInFromLeft = (props) => (
+const SlideOutRight = (props) => (
    <Transition
-      in={true}
-      timeout={props.timeout || 0}
-      appear={true}
+      in={props.in}
+      timeout={0}
    >
       {state =>
          <div style={{
@@ -29,4 +30,4 @@ const SlideInFromLeft = (props) => (
    </Transition>
 );
 
-export default SlideInFromLeft
+export default SlideOutRight

@@ -9,15 +9,15 @@ import SlideInFromRight from '../components/animations/SlideInFromRight';
 const DebatePage = ({ data }) => (
    <div className={styles.container} >
       <div className={styles.left_panel} >
-         <SlideInFromLeft> <DebateNav /> </SlideInFromLeft>
+         <DebateNav />
          <div className={styles.fname} >
-            <SlideInFromLeft> Joshua </SlideInFromLeft>
+            <SlideInFromLeft timeout={200}> Joshua </SlideInFromLeft>
          </div>
          <div className={styles.lname}>
             <SlideInFromLeft> Palacios </SlideInFromLeft>
          </div>
          <div className={styles.title}>
-            <SlideInFromLeft> ACADEMIC DEBATE COACH </SlideInFromLeft>
+            <SlideInFromLeft timeout={600}> ACADEMIC DEBATE COACH </SlideInFromLeft>
          </div>
       </div>
       <div className={styles.image_div} >

@@ -12,8 +12,8 @@ const defaultStyle = {
 const transitionStyles = {
    entering: { opacity: 0},
    entered: { opacity: 1 },
-   exiting: { opacity: 1 },
-   exited: { opacity: 1 }
+   exiting: { opacity: 0 },
+   exited: { opacity: 0 }
 }
 
 class HeroImg extends Component {
@@ -28,12 +28,6 @@ class HeroImg extends Component {
         in={this.props.in}
         timeout={0}
         appear={true}
-        addEndListener={(n, done) => {
-         if (!this.props.in) {
-            tl.to(n, .5, {x: -100})
-              .to(n, 2, {x: 1000, ease: Back.easeOut});
-         }}
-      }
       >
         {state =>
           <div style={{

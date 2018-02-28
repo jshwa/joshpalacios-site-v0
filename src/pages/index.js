@@ -14,20 +14,20 @@ class IndexPage extends React.Component {
 
    goToDebate = () => {
       this.setState({in:false})
-      setTimeout(() => {navigateTo('/debate/')}, 1500)
+      setTimeout(() => {navigateTo('/debate/')}, 2000)
       
    }
 
    goToDev = () => {
       this.setState({in:false})
-      setTimeout(() => {navigateTo('/dev/')}, 1500)
+      setTimeout(() => {navigateTo('/dev/')}, 2000)
    }
 
    render() {
       return (
          <div className={styles.container} >
             <div className={styles.link} onClick={this.goToDebate}>
-              <Fade in={this.state.in}> ACADEMIC DEBATE COACH </Fade>
+               <Fade in={this.state.in}> ACADEMIC DEBATE COACH </Fade>
             </div>
             <HeroImg in={this.state.in} image={this.props.data.logo.sizes} />
             <div className={styles.link} onClick={this.goToDev}>
