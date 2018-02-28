@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import DebateNav from '../components/Header/DebateNav';
 import styles from '../css/debate.module.css';
 import SlideInFromLeft from '../components/animations/SlideInFromLeft';
+import SlideInFromRight from '../components/animations/SlideInFromRight';
 
 const DebatePage = ({ data }) => (
    <div className={styles.container} >
@@ -20,7 +21,9 @@ const DebatePage = ({ data }) => (
          </div>
       </div>
       <div className={styles.image_div} >
-         <Link to="/"><Img sizes={data.hero.sizes} className={styles.image} imgStyle={{"object-position": "right center"}}/></Link>
+         <SlideInFromRight timeout={700}>
+            <Link to="/"><Img sizes={data.hero.sizes} className={styles.image} imgStyle={{"object-position": "right center"}}/></Link>
+         </SlideInFromRight>
       </div>
    </div>
 )
